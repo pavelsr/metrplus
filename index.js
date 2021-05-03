@@ -5,7 +5,8 @@ function createTable(tableData, callback) {
 	table.empty();
 
 	//var header_columns = ["egrn", "min_price", "start_price", "lot_n", "trade_procedure_number", "href"];
-	var header_columns = [ "href", "egrn", "lot_n", "lot_square", "min_price", "start_price", "trade_procedure_number" ];
+	// var header_columns = [ "href", "egrn", "lot_n", "lot_square", "min_price", "start_price", "trade_procedure_number" ];
+	var header_columns = [ "ЕГРН", "Мин. цена", "Стартовая цена", "Номер лота", "Площадь", "Номер ТП", "ссылка" ];
 
 	var thead_tr = $('<tr>');
 	$.each(header_columns, function(x, hcol) {
