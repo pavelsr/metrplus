@@ -33,22 +33,6 @@ function TableSort() {
 		widthFixed: true,
 		widgets: ['zebra', 'stickyHeaders', 'filter'],
 		showProcessing: true,
-		widgetOptions: {
-			filter_formatter: {
-				1: function($cell, indx) {
-					console.log("1 tablesorter.filterFormatter.select2 start");
-					return $.tablesorter.filterFormatter.select2($cell, indx, {
-						match: false
-					});
-				},
-				2: function($cell, indx) {
-					console.log("2 tablesorter.filterFormatter.select2 start");
-					return $.tablesorter.filterFormatter.select2($cell, indx, {
-						match: false
-					});
-				},
-			}
-		}
 	});
 	console.log("tablesorter finished");
 }

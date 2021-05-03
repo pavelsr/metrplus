@@ -9,7 +9,10 @@
 	<meta name="author" content="Pavel Serikov">
 	<meta content="Display any CSV file as a searchable, filterable, pretty HTML table" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.blue.min.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet">
+
+	<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,8 +22,19 @@
 		<p>Земельные участки</p>
 		<p>https://tbankrot.ru/reestr_card?debtor_id=128249</p>
 
+		<iframe src="https://egrp365.org/p_map/?ref=qf&layer=1&kadnum=47:14:0901004:2076" height="500" width="100%" allowfullscreen="" frameborder="0"></iframe>
+
+		<p><a href="/map.html" target="_blank">Альтернативная карта</p>
+		<p><a href="/sale_map.png" target="_blank">Карта продаж</p>
+
 		<div id='table-container'>
 			<table class="table" id="jquery-table"></table>
+		</div>
+
+		<div class='special'>
+			<p>Дороги: 47:14:0901004:2074, 47:14:0901004:2073, 47:14:0901004:2066, 47:14:0901004:2071</p>
+			<p>Большой участок у въезда (например под магазин): 47:14:0901004:2076
+			<p>7 м2 где тачка столяла: 47:14:0901004:2075</p>
 		</div>
 
 	</div>
@@ -36,9 +50,12 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/widgets/widget-filter-formatter-select2.min.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.12.0/leaflet-providers.min.js"></script>
+
 	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="view_map.js"></script>
 </body>
 
 </html>
