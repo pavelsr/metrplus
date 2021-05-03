@@ -1,10 +1,12 @@
 function createTable(tableData, callback) {
-	
+
 	var table = $('table#jquery-table');
 
 	table.empty();
-	
-	var header_columns = ["Header_1", "Header_2", "Header_3", "B", "C"];
+
+	//var header_columns = ["egrn", "min_price", "start_price", "lot_n", "trade_procedure_number", "href"];
+	var header_columns = [ "href", "egrn", "lot_n", "lot_square", "min_price", "start_price", "trade_procedure_number" ];
+
 	var thead_tr = $('<tr>');
 	$.each(header_columns, function(x, hcol) {
 		$('<td>').text(hcol).appendTo(thead_tr);
@@ -50,7 +52,7 @@ function TableSort() {
 	console.log("tablesorter finished");
 }
 
-Papa.parse('demo.csv', {
+Papa.parse('result.csv', {
 	download: true,
 	header: true,
 	// quoteChar: '"',
